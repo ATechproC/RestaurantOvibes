@@ -1,0 +1,251 @@
+.main {
+position: relative;
+padding: 20px 0;
+}
+
+
+
+.main .box-img {
+position: fixed;
+z-index: -1;
+left: -0%;
+top: 0;
+animation: bg-img 2.4s linear forwards;
+}
+
+@keyframes bg-img {
+0% {
+    transform: scale(1);
+}
+100% {
+    transform: scale(1.06);
+}
+}
+
+.main .box-img::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container-entree {
+    display: none;
+}
+
+/* start style header  */
+.container-header {
+    top: 0;
+}
+/* end style header  */
+
+
+h2 {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff;
+    animation: title 2s linear forwards;
+}
+
+@keyframes title {
+    0% {
+        transform: scale(0); 
+        opacity: 0;
+    }
+    20% {
+        transform: scale(0.2);
+        opacity: 0.2;
+    }    
+    40% {
+        transform: scale(0.4) ;
+        opacity: 0.4;
+    }    
+    60% {
+        transform: scale(0.6);
+        opacity: 0.6;
+    }    
+    80% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }   
+    100% {
+        transform: scale(1) ;
+        opacity: 1;
+    }
+}
+
+.menu-category {
+    margin: 5rem auto;
+    max-width: 800px;
+}
+
+.menu-category h2 {
+    background-color: #ff6600 ;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(20px);
+    border: 2px solid #c6c3c3;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.menu1 {
+    position: relative;
+    left :  -150%;
+    animation: menu1 2s linear forwards;
+}
+
+@keyframes menu1 {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 0;;
+    }
+}
+
+.menu2 {
+    position: relative;
+    right :  -150%;
+    animation: menu2 2s linear forwards;
+}
+
+@keyframes menu2 {
+    0% {
+        right: -150%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+.menu-item h3 {
+    margin: 0;
+    color:  #fff;
+}
+
+.menu-item p {
+    margin: 0.2rem 0 0;
+    color:  #fff;
+    font-size: 0.9rem;
+}
+
+.menu-item span {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.marquee {
+    transform: translateY(-85px);
+    background-color: #000;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee .text {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 40%;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee .text .express {
+    display: inline-block;
+    margin-right: 600px;
+}
+
+.marquee .text .express2 {
+    margin-right: 600px;
+}
+
+.marquee .text .express3 {
+    margin-right: 600px;
+}
+
+.marquee .text .express4 {
+    margin-right: 600px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(40%);
+    }
+    100% {
+        transform: translateX(-40%)
+    }
+}
+
+.cc1 {
+    display: none;
+}
+
+
+
+@media (max-width: 675px)  {
+    .container-header header {
+        animation-play-state : paused;
+        transform: translateY(13%);
+    }
+    .menu1,
+    .menu2 {
+        animation: menu11 1s forwards;
+    }
+    @keyframes menu11 {
+        0%,100% {
+            left: 0;
+        }
+    }
+    .container {
+            padding-top: 10%;
+            background-image: url("../images/menu_entree.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+    }
+    .container section {
+        width: 90%;
+        margin: auto;
+    }
+    .menu-entree {
+        display: block;
+        margin-top: -100px;
+    }
+    .marquee  {
+        margin: 100px 0;
+    }
+    .main .box-img {
+        display: none;
+    }
+    .cc1 {
+        display: block;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}

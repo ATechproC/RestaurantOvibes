@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Menu | Restaurant Ovibes</title>         
+        <link rel="icon" type="image/x-icon" href="../ressources/images/favicon.ico"> 
+        <link href="../../css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../ressources/styles/font-awesome.min.css"> 
+        <link rel="stylesheet" href="../ressources/styles/style-header.css"> 
+        <link rel="stylesheet" href="../ressources/styles/contact.css"> 
+    </head>     
+    <body> 
+        <div id="container">
+                    <!-- En-tête -->         
+        <div class="container-header"> 
+            <header> 
+                <div class="logo"> 
+                    <div class="btn-bar"> 
+                        <label for="check"> <i class="fa fa-bars"></i> 
+                        </label>                         
+                    </div>                     <a href="acceuil.html" class="setElement">  <p class="restaurant">  <span>r</span>  <span>e</span>  <span>s</span>  <span>t</span>  <span>a</span>  <span>u</span>  <span>r</span>  <span>a</span>  <span>n</span>  <span>t</span>  </p>  <p class="lhssan">  <span>o</span>  <span>v</span>  <span>i</span>  <span>b</span>  <span>e</span>  <span>s</span>  </p>  </a> 
+                </div>                 
+                <nav> 
+                    <ul> 
+                        <input type="checkbox" id="check" checked> 
+                        <li style="--i: 0;--j: 7">
+                            <a href="acceuil.html">accueil</a>
+                        </li>                         
+                        <li style="--i: 2;--j: 6" class="dropdown"> <a href="menu_entree.html" class="menu">menu
+ <i class="fa fa-angle-right"></i>  </a> 
+                            <ul class="dropdown-menu"> 
+                                <li>
+                                    <a href="menu_entree.html">entree</a>
+                                </li>                                 
+                                <li>
+                                    <a href="menu_plates.html">Plats Principaux</a>
+                                </li>                                 
+                                <li>
+                                    <a href="menu_desserts.html">desserts</a>
+                                </li>                                 
+                            </ul>                             
+                        </li>                         
+                        <li style="--i: 3;--j: 5">
+                            <a href="reservation.html">réservation</a>
+                        </li>                         
+                        <li style="--i: 4;--j: 3">
+                            <a href="apropos.html" class="link">A propos</a>
+                        </li>                         
+                        <li style="--i: 5;--j: 2">
+                            <a href="contact.html">contact</a>
+                        </li>                         
+                        <li style="--i: 6;--j: 1">
+                            <a href="connexion.html" class="sign-in">Se connecter</a>
+                        </li>                         
+                        <li style="--i: 7;--j: 0">
+                            <a href="inscription.html" class="sign-up">S'inscrire</a>
+                        </li>                         
+                    </ul>                     
+                </nav>                 
+            </header>             
+        </div>         
+        <!-- Section Contact -->         
+        <main class="main"> 
+            <div class="box-img"> 
+                <img src="../ressources/images/reservation-seat.jpg" draggable="false"> 
+            </div>             
+            <section class="contact-info"> 
+                <div class="contact-form"> 
+                    <h2>Envoyez-nous un message</h2> 
+                    <form action="/submit-contact" method="POST"> 
+                        <label for="name">Nom complet : </label>                         
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required> 
+                        <label for="phone">Numéro de téléphone : </label>                         
+                        <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required> 
+                        <label for="email">Email : </label>                         
+                        <input type="email" id="email" name="email" placeholder="Votre email" required> 
+                        <label for="message">Message : </label>                         
+                        <textarea id="message" name="message" placeholder="Votre message" required></textarea> 
+                        <div class="container-btn"> 
+                            <button type="submit" class="btn-submit">Envoyer</button>                             
+                        </div>                         
+                    </form>                     
+                </div>                 
+                <div class="contact-details"> 
+                    <h2 class="name">Restaurant Ovibes</h2> 
+                    <p class="desc-info">Nous sommes ravis de répondre à toutes vos questions </p> 
+                    <div class="info-item"> <strong class="strong">Adresse :</strong> 
+                        <p>BD Moulay youssef, Casablanca</p> 
+                    </div>                     
+                    <div class="info-item"> <strong class="strong">Téléphone :</strong> 
+                        <p>+212 6 31 60 72 50</p> 
+                    </div>                     
+                    <div class="info-item"> <strong class="strong">Email :</strong> 
+                        <p>restaurant@gmail.com</p> 
+                    </div>                     
+                    <div class="open-hours"> 
+                        <h3 class="strong">Opening Hours : </h3> 
+                        <p>Monday - Friday  _____________   9:00 - 18:00 ;</p> 
+                        <p>Saturday         _____________   11:00 - 16:30 ;</p> 
+                        <p>Sunday           _____________   Closed ;</p> 
+                    </div>                     
+                    <div class="social-media"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-whatsapp"></i></a> 
+                    </div>                     
+                </div>                 
+            </section>             
+        </main>         
+        <!-- Pied de page -->         
+        <footer> 
+            <p>&copy; 2024 Restaurant Ovibes - Tous droits réservés.</p> 
+        </footer>  
+        </div>
+    </body>     
+</html>

@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.acceuil-button {
+    display: none;
+}
+
+
+body {
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    display: flex;
+    background-image: url('../images/testimonial-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: -0.5% -0.5%;
+    background-size: cover;
+    animation: img-bg1 3s ease forwards;
+}
+
+@keyframes img-bg1 {
+    0% {
+        background-position: -0.5% -0.5%;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+body::after {
+    content:  "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.1);
+} 
+
+
+/* start style menu  */
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 1500px;
+    height: 100%;
+}
+
+#check {
+    display: none;
+}
+
+.btn-1,
+.btn-2 {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    transition: visibility 0.4s ease, opacity 0.4s ease;
+}
+
+.btn-1 {
+    left: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn-2 {
+    left: 240px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-1 i,
+.btn-2 i {
+    cursor: pointer;
+    font-size: 19px;
+    color: #fff;
+}
+
+#check:checked ~ .container-menu {
+    left: -300px;
+}
+
+#check:checked ~ .btn-2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#check:checked ~ .btn-1 {
+    opacity: 1;
+    visibility: visible;
+}
+
+li.logo-box {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    gap: 10px;
+    color: #fff;
+    cursor: default;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(255,255,255,0.5);
+}
+
+.logo-box .title-logo {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.4;
+    font-size: 20px;
+}
+
+.box-img {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.box-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-menu {
+    position: relative;
+    left: 0;
+    padding: 40px 10px 0 10px;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow:  0  0 8px rgba(255,255,255,0.5);
+    transition: left 0.6s ease;
+}
+
+.ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    /* background-color: red; */
+    padding-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container-menu ul li a {
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin-bottom: 8px;
+    /* background-color: red; */
+    font-weight: bold;
+    border-radius: 10px;
+    transition: border 0.5s ease,box-shadow 0.5s ease;
+}
+
+.container-menu ul li a:hover,
+.sign-in-out li:first-of-type a {
+    border: 1px solid #fff;
+    box-shadow: rgba(255,255,255,0.5);
+}
+
+.container-menu ul li a i {
+    font-size: 25px;
+}
+
+.container-menu ul li:nth-child(5) a .title:first-letter {
+    text-transform: uppercase;
+}
+
+.container-menu ul li:not(:nth-child(5)) a .title {
+    text-transform: capitalize;
+}
+
+.container-menu .sign-in-out  {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+/* end style menu  */
+
+/* start style section connexion  */
+
+/* Conteneur principal */
+.container-1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+#check:checked ~ .container-1 {
+    animation: form 0.4s linear forwards;
+}
+
+#check:not(:checked) ~ .container-1 {
+    animation: form1 0.4s linear forwards;
+}
+
+@keyframes form {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-120px);
+    }
+}
+
+@keyframes form1 {
+    0% {
+        transform: translateX(-120px);
+    }
+    100% {
+        transform: translateX(-0);
+    }
+}
+
+/* Boîte de connexion */
+.login-box {
+    backdrop-filter: blur(20px);
+    border: 2px solid #c6c3c3;
+    border-radius: 15px;
+    padding: 4em 2.5em 4em 2.5em;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    color: #ffffff;
+}
+
+.login-box .h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color:#ff6600 ;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #ff6600;
+}
+
+.register-link {
+    line-height: 1.2;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-desc {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.register-link a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.container-1 .box-icons {
+    transform: translateY(25px);
+    text-align: center;
+}
+
+.container-1 .box-icons a {
+    display: inline-block;
+    background-color: #ff6600;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transition: background-color .5s ease,color .5s ease;
+}
+
+.container-1 .box-icons a i {
+    font-weight:  bold;
+    line-height: 30px;
+}
+
+.container-1 .box-icons a:hover {
+    background-color: #fff;
+    color: #ff6600;
+}
+
+/* end style section connexion  */
+
+@media (max-width: 675px) {
+    #check,
+    .btn-1,
+    .btn-2, 
+    .container-menu {
+        display: none;
+    }
+    
+    .container-logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-1 {
+        width: 80%;
+        padding: 30px;
+        margin-left: -32px;
+    }
+    .container-1 .box-icons {
+        transform: translateY(12px);
+    }
+    .acceuil-button {
+        display: block;
+        height: fit-content;
+    }
+    .acceuil-button a {
+        display: block;
+        padding: 10px 20px;
+        position: fixed;
+        z-index: 10;
+        background-color: #ff6600;
+        top: 18px;
+        border-radius: 15px;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 20px;
+        transition: background-color 0.5s linear, color 0.5s linear;
+    }
+
+    .acceuil-button a:nth-child(1) {
+        left: 10px;
+    }
+
+    .acceuil-button a:nth-child(2) {
+        right: 10px;
+    }
+    .acceuil-button a:hover {
+        background-color: #fff;
+        color: #ff6600;
+    }
+}

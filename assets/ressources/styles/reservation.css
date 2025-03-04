@@ -1,0 +1,190 @@
+html,
+#container {
+  background-image : url("../images/reservation-seat.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+
+body::after{
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* pointer-events: none; */
+}
+
+/* start style header  */
+.container-header {
+  top: 0;
+}
+
+header nav ul li:nth-child(4) a::after{
+  width: 100%;
+}
+
+/* end style header  */
+.reservation-container {
+  position: relative;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 80px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
+
+@keyframes bg-img {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.06);
+  }
+}
+
+.title-form,
+.rh-title {
+  color: #FF4500;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 1rem ;
+}
+
+.title-form {
+  text-shadow: 0 0 11px #FF4500;
+}
+
+.rh-title {
+  color:#FFA500 ;
+  margin-top: -20px;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0 0 11px #FFA500;
+}
+
+.title-form,
+.rh-title {
+  position: relative;
+  z-index: 1;
+  top: 160px;
+  opacity: 0;
+  visibility: hidden;
+  animation: position 1.6s ease forwards;
+}
+
+.rh-title {
+  animation-delay: 0.4s;
+}
+
+@keyframes position {
+  0% {
+    top: 160px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  56% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+}
+
+.desc-form {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  backdrop-filter: blur(20px);
+  border: 2px solid #c6c3c3;
+  border-radius: 15px;
+  padding: 4em 2.5em 4em 2.5em;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  animation: form-animation 1s linear forwards;
+}
+
+@keyframes form-animation {
+  0% {
+    transform: translateY(2px) scale(0.92);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  border: none;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #e34f4f;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+button.btn-submit {
+  background-color:#ff6600;
+  color: white;
+  padding: 15px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button.btn-submit:hover {
+  background-color: #f45529;
+}
+
+/*footer */
+footer {
+  position: relative;
+  z-index: 1;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+
+
