@@ -198,8 +198,6 @@ h2 {
     display: none;
 }
 
-
-
 @media (max-width: 675px)  {
     .container-header header {
         animation-play-state : paused;
