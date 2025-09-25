@@ -12,3 +12,8 @@
 #### Restaurant Ovibes - Best In The City
 
 Welcome to Restaurant Ovibes, where culinary excellence meets exceptional dining experiences. As the premier dining destination in the city, we pride ourselves on offering an unforgettable gastronomic journey that combines exquisite flavors, elegant ambiance, and impeccable service.
+
+### <a name="tech-stack">⚙️ Tech Stack</a>
+
+- HTML5
+- CSS3
